@@ -74,7 +74,7 @@ jobs:
             ]   
     
     - name: Slack Notification on no new commits
-      if: (success() & steps.add_commit.outputs.committed=='false')
+      if: (success() && steps.add_commit.outputs.committed=='false')
       uses: tokorom/action-slack-incoming-webhook@main
       env:
         INCOMING_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
