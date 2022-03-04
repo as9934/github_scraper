@@ -33,7 +33,7 @@ jobs:
       with:
           text: A successful scrape!
           attachments: |
-          [
+            [
               {
               "color": "good",
               "author_name": "${{ github.actor }}",
